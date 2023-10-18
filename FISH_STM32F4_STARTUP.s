@@ -6,6 +6,9 @@
 
  SECTION .text : CODE (2)
  ALIGNROM 2,0xFFFFFFFF
+ //?? Error[67]: Public 'FM3_COLD' did not appear in label field
+ //PUBLIC FM3_COLD
+
  PUBLIC STM32Fx_COLD_FISH
  PUBLIC  __iar_program_start
 __iar_program_start
