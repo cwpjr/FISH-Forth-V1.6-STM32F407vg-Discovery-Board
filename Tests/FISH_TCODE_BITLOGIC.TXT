@@ -1,0 +1,40 @@
+( FISH_TCODE_BITLOGIC.TXT cwpjr 2014 )
+
+( FISH_ONLY )
+
+\ FOR SRM WHERE .B IS NOT DEFINED
+: .B BASE @ >R BIN U. R> BASE ! ;
+
+VAR BITHOME
+
+( TEST CLRBITS [XOR], SETBITS [OR], and ANDBITS [AND] )
+
+: SETBITSEE ( addr val ) OVER >R SETBITS R> @ .B ;
+
+: CLRBITSEE ( addr val ) OVER >R CLRBITS R> @ .B ;
+
+: ANDBITSEE ( addr val ) OVER >R ANDBITS R> @ .B ;
+
+: BitSee.Set SETBITSEE ;	( BitSet without debug .B )
+: BitSee.Clr CLRBITSEE ;	( BitClr without debug .B )
+: BitSee.And ANDBITSEE ;	( BitAnd without debug .B )
+
+
+FFFF000Fh BITHOME !
+BITHOME @ .B           
+BITHOME 0009h CLRBITSEE
+BITHOME 8009h SETBITSEE
+
+FFFF000Fh BITHOME !
+BITHOME @ .B               
+BITHOME 00000020h SETBITSEE
+BITHOME F0F80009h ANDBITSEE
+FFFF0006h BITHOME !
+BITHOME @ .B               
+BITHOME 00000809h SETBITSEE
+BITHOME @ .B               
+BITHOME FFF90009h ANDBITSEE
+
+
+MYWORDS
+
