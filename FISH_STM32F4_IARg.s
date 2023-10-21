@@ -1,16 +1,23 @@
 // FISH_STM32F4_IAR.s - FULL WORD
-//$startup_stm32f4xx.s    // .intvec first!
+// FISH FOR THE STM IS CURRENTLY SUPPORTING F2 TO F4
+// Code is common, seperate linker files used for memory map differences.
 $FISH_STM32F4_MAIN_INCLUDES.h
 //------------------------------------------------------------------------------
-// From DebugSrc:
+// V1.8: 
+// Fix backspace issue.
+// V1.7:
+//
+// V1.6:
+// Release to be base for 4e4th base port.
+// Added STMF205RC for STM RPM Board with 118mhz sysclock from XRC10mhz
+// Any key exit from DUMP
 
-// From DebugSrc:
-// FISH ARM DebugSrc V1.5.4:
+// V1.5.4:
 // CONSTANT, VARIABLE and EXECUTE fit in SRM.
 
-// FISH ARM DebugSrc V1.5.3:
+// V1.5.3:
 // CREATE for DOES>
-// BASE in prompt restored.
+// BASE in prompt restored to SRM.
 
 // BUG FIX v1.5.2 RM RELEASE:
 // FIXED RWORD TOFA TO ADD ADDR OFFSET TO FPA BASE FLASH ADDR
@@ -23,16 +30,22 @@ $FISH_STM32F4_MAIN_INCLUDES.h
 msg_FISH:
 // DC8 "?" IS A NULL TERMINATED STRING
 // DC8 '?' IS NOT
+//#if FISH_PubRel_WORDSET | FISH_DebugSrc_WORDSET
+	DC8     'FISH ARM '
+//#endif
+#ifdef  STM32F4_XRC08_168MHZ
+        DC8     'STM32F407VG DISCO '
+#endif
+#ifdef STM32F205RC_XRC10_118MHZ
+        DC8     'STM32F205RC STP RPM Board debug TEST!!!! '
+#endif
 #ifdef FISH_Debug_WORDSET
-	DC8     'FISH ARM STM32F4 DISCO DebugSrc RM V1.5.4 (C)2014 A-TEAM FORTH : '
-#else   // Above has to include one of these!
-#ifdef FISH_PubRel_WORDSET
-	DC8     'FISH ARM STM32F4 DISCO RM V1.6 (C)2014 A-TEAM FORTH : '
+	DC8     'DebugSrc '
 #endif
-#ifdef FISH_STM_M3_PRO_WORDCAT
-	DC8     'FISH ARM STM32F4 DISCO Pro RM V1.6 (C)2014 A-TEAM FORTH : '
+#ifdef FISH_PRO_WORDCAT
+	DC8     'Pro '
 #endif
-#endif  // FISH_Debug_WORDSET
+        DC8     'RM V1.6 atbest! <no pon etc>(C)2014-2018 A-TEAM FORTH : '
         DC8     __DATE__        // Null string
 msg_FISH_TIMESTAMP:
         DC8     ' at '
@@ -1230,7 +1243,7 @@ BYE_NFA:
 BYE:
 	DC32 	.+5
  SECTION .text : CODE (2)
-        B       FM3_COLD      // __iar_program_start
+        B       STM32Fx_COLD_FISH      // __iar_program_start
  LTORG
 
 
@@ -4684,6 +4697,7 @@ DOTVARSPACE:
 //	DUMP DUMP:	( addr n -- )
 //	Print adrr and n lines of 4 columns of memory values in hexadecimal.
 //	Address must be even and a multiple of 4 else error message issued.
+//      Any key presssed will stop DUMP.
 
  SECTION .text : CONST (2)
 DUMP_NFA:
@@ -4720,6 +4734,11 @@ DUMP_BP1:
  DC32 NOOP
         DC32    CLRPAD  // Resets OUT
 #endif
+        DC32    QKEY
+        DC32    ZBRAN
+        DC32     DUMP_CONT-.
+        DC32    LEAVE
+DUMP_CONT:
         DC32    XLOOP
 	DC32	DUMP_ADDR_LINE-.
 
@@ -4767,7 +4786,7 @@ RBASE_NFA:
  ALIGNROM 2,0xFFFFFFFF
 	DC32	DBASE_NFA
 RBASE:
-        DC32    DOCON,  SRAM1_START
+        DC32    DOCON,  RAM_START    // RAM WHERE DICT ALLOACTED IN MEMMAP
 
 
 //	CLS CLS:	( -- )
@@ -5237,7 +5256,7 @@ CLRTIB:
 #endif
 
 #ifdef USE_CMAIN
-//:NONAME RET2c:      ( -- ) POP main.c saved lr saved in FM0_COLD
+//:NONAME RET2c:      ( -- ) POP main.c saved lr saved in STM32Fx_COLD_FISH
  SECTION .text : CONST (2)
  ALIGNROM 2,0xFFFFFFFF
 RET2c:
