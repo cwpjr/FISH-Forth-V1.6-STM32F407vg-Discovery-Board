@@ -1,0 +1,89 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V8.22.1.15669/W32 for ARM       24/Oct/2023  15:11:09
+# Copyright 1999-2018 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\main.c
+#    Command line =  
+#        -f C:\Users\owner\AppData\Local\Temp\EW134F.tmp
+#        (C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\main.c
+#        -lcN
+#        C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\List
+#        -lb
+#        C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\List
+#        -o
+#        C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\Obj
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None -On -I "C:\Program Files (x86)\IAR
+#        Systems\Embedded Workbench 8.0\arm\CMSIS\Core\Include\" -I "C:\Program
+#        Files (x86)\IAR Systems\Embedded Workbench
+#        8.0\arm\CMSIS\DSP\Include\")
+#    Locale       =  C
+#    List file    =  
+#        C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\List\main.lst
+#    Object file  =  
+#        C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\Obj\main.o
+#
+###############################################################################
+
+C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\main.c
+      1          // FISH STM32F4 DISCO "int main();
+      2          
+      3          
+      4          #define STM32F40XX      `// for stm32f4xx.h usage
+      5          //Without this:
+      6          // Fatal Error[Pe035]: #error directive: 
+      7          //      "Please select first the target STM32F4xx device
+      8          //      used in your application (in stm32f4xx.h file)" 
+      9          
+     10          // For CMSIS function usage
+     11          #include "stm32f4xx.h"
+     12          #include "core_cm4.h"     // For CMSIS NVIC_SystemReset function
+     13          
+     14          
+     15          #pragma call_graph_root = "interrupt"
+     16          __weak void HardFault_Handler( void ) { NVIC_SystemReset(); }   // HW reset goed to for stm32f4xx.h
+     17          //__weak void HardFault_Handler( void ) { // for stm32f4xx.h usage }
+     18          
+     19          void C_CMSIS_DISABLE_IRQS() {
+     20            __disable_irq();
+     21          }
+     22          
+     23          void C_CMSIS_ENABLE_IRQS() {
+     24            __enable_irq();
+     25          }
+     26          
+     27          /*
+     28          void C_CMSIS_REV(unsigned long word)
+     29          {
+     30          // prototype is:
+     31          // unsigned long __REV(unsigned long);
+     32          // This works if word is passed in r0
+     33            __REV(word);
+     34          // Results is returned in r0
+     35          }
+     36          */
+     37          
+     38          
+     39          //#ifdef USE_CMAIN // defined in FISH_STM32F4_CONFIG_DEFINES.h
+     40          // the prototype of main needs to be defined as int main() or int main(int argc , char *argv)
+     41          int main() {
+     42          
+     43           extern void STM32Fx_COLD_FISH();
+     44           
+     45          	volatile static int i = 0 ;
+     46          	while(1) {
+     47          		STM32Fx_COLD_FISH();		// ret2c returns here
+     48          		i++ ;
+     49          	}
+     50          
+     51          	return 0 ;
+     52          }
+     53          //#endif
+
+Errors: 1
+Warnings: 1

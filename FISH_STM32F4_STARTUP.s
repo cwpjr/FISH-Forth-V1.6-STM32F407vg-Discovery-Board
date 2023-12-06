@@ -1,18 +1,15 @@
-// FISH_STM32F4_STARTUP.s
+// FISH_STM32F4_STARTUP.s(
 //----------------------------------------------------------------------
-#ifdef USE_CMAIN
- PUBLIC RET2c
+#ifdef  USE_CMAIN
+  PUBLIC RET2c
 #endif
+  PUBLIC STM32Fx_COLD_FISH
 
- SECTION .text : CODE (2)
+// :NONAME STM32Fx_COLD_FISH ( -- ) Reset Vector entry point. Setup FISH Virtual Machine.
+ 
+ SECTION .text : CONST (2)
  ALIGNROM 2,0xFFFFFFFF
-
- PUBLIC STM32Fx_COLD_FISH
- PUBLIC  __iar_program_start
-__iar_program_start
-// MAIN() entry point defined by #Defines in FISH_STM32F4_CONFIG_DEFINES.h
-// :NONAME FM0_COLD ( -- ) Reset Vector entry point. Setup FISH Virtual Machine.
-STM32Fx_COLD_FISH:
+ NAME STM32Fx_COLD_FISH:
 // Initialize DICT RAM segment
 
 	ldr	n, = 0x11111111	        // fill pattern
@@ -90,13 +87,14 @@ ssNEXT1:
  ALIGNROM 2,0xFFFFFFFF
 FMx_SYSTICK_ISR:
 // save what you use
+
         PUSH    { t, n, lr}
-        LDR     n, = STICKER
-        LDR     t, [n]
-        ADDS    t, t, #1
-        STR     t, [n]
-// restore what was being used
-        POP     { t, n, pc }
+          LDR     n, = STICKER
+          LDR     t, [n]
+          ADDS    t, t, #1
+          STR     t, [n]
+      // restore what was being used
+           POP     { t, n, pc }
 //        BX      lr
  LTORG
 

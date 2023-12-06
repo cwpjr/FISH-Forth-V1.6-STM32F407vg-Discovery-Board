@@ -4,9 +4,9 @@
 $FISH_STM32F4_MAIN_INCLUDES.h
 //------------------------------------------------------------------------------
 // V1.8: 
-// Fix backspace issue.
-// V1.7:
-//
+// 2DO: Add VIO_UARTX, VIO_KEY, VIO_?KEY and VIO_EMIT
+// (EMIT), (KEY?), and (KEY).
+
 // V1.6:
 // Release to be base for 4e4th base port.
 // Added STMF205RC for STM RPM Board with 118mhz sysclock from XRC10mhz
@@ -643,7 +643,7 @@ QALIGN_OK:
 
 
 //	?ERROR QERROR: ( f nullstr -- )
-//	If f true type error message (nullstr) and ABORT.
+//	If f NON ZERO type error message (nullstr) and ABORT.
 
  SECTION .text : CONST (2)
 QERROR_NFA:
@@ -1242,8 +1242,9 @@ BYE_NFA:
 	DC32	FORGET_NFA
 BYE:
 	DC32 	.+5
- SECTION .text : CODE (2)
-        B       STM32Fx_COLD_FISH      // __iar_program_start
+ //SECTION .text : CODE (2)
+        B        FM4_WARM //__iar_program_start // STM32Fx_COLD_FISH 
+        //B       STM32Fx_COLD_FISH      // __iar_program_start
  LTORG
 
 
@@ -4212,7 +4213,7 @@ SPACES_NFA:
 #ifdef XON_XOFF
         DC32    XON_NFA
 #else
-        DC32	UART0_TX_NFA
+//        DC32	UART0_TX_NFA
 #endif
 SPACES:
 	DC32	DOCOL

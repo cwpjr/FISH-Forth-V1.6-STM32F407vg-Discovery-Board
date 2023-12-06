@@ -51,7 +51,7 @@
 ; FISH STM32F4 DISCO
 
 #define CMSIS_C // __weak void HardFault_Handler( void ) { NVIC_SystemReset(); }
-//#define CMSIS_ASM
+#define CMSIS_ASM
 
 //      MODULE  ?cstartup       //????
         AAPCS INTERWORK, VFP_COMPATIBLE, RWPI_COMPATIBLE
@@ -59,28 +59,53 @@
 
         ;; Forward declaration of sections.
         SECTION CSTACK:DATA:NOROOT(3)
+// root keyword is used to ensure that the vector table is not removed by the linker. 
+        SECTION .intvec:CODE:ROOT(2)
+/*
+#ifdef CMSIS_C
+EXTERN  NVIC_SystemReset
+#endif
+*/
 
-//        SECTION .intvec:CODE:NOROOT(2)
-        SECTION .intvec: CODE:ROOT(2)
+/*
+What scaffolding would work to declare this (type( of function here?
+What the proper was to build it and link it~!!!
+OR HAL_NVIC_SystemReset();
+OR cortex_m::peripheral::SCB::sys_reset();
+Need to make it work here or in main
+#include "core_cm4.h"
 
+__STATIC_INLINE void NVIC_SystemReset(void)
+{
+// Code in header file cm4.h
+  __DSB();                                                     // Ensure all outstanding memory accesses included
+                                                               // buffered write are completed before reset
+  SCB->AIRCR  = ((0x5FA << SCB_AIRCR_VECTKEY_Pos)      |
+                 (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+                 SCB_AIRCR_SYSRESETREQ_Msk);                   // Keep priority group unchanged
+  __DSB();                                                     // Ensure completion of memory access
+  while(1);                                                    // wait until reset
+}
+*/
+        EXTERN  FMx_SYSTICK_ISR
         EXTERN  __iar_program_start
         EXTERN  STM32Fx_COLD_FISH
-        EXTERN  FMx_SYSTICK_ISR
-#ifdef CMSIS_C        
-        EXTERN  HardFault_Handler
-#endif
-        EXTERN  NVIC_SystemReset
         
         PUBLIC  __vector_table
 
         DATA
 __vector_table
-        DCD     sfe(CSTACK)
-; Change to STM32Fx_COLD_FISH bypasses run to STM32Fx_COLD_FISH function in debugger
-; Reset_Handler B STM32Fx_COLD_FISH allows debugger to stop there.
-        DCD     Reset_Handler             ; Reset Handler ; STM32Fx_COLD_FISH
+;        DCD     sfe(CSTACK)
+         DCD 0x20000000 ; 0x0 ; 0x2001FFFF ; SDRAM_TRUE_END  ; sfe(CSTACK)
+
+;        DCD     Reset_Handler             ; Reset_Handler ; STM32Fx_COLD_FISH
+        DCD     STM32Fx_COLD_FISH             ; Reset_Handler ; STM32Fx_COLD_FISH
+
         DCD     NMI_Handler               ; NMI Handler
+
         DCD     HardFault_Handler         ; Hard Fault Handler
+;        DCD     NVIC_SystemReset         ; Hard Fault Handler
+
         DCD     MemManage_Handler         ; MPU Fault Handler
         DCD     BusFault_Handler          ; Bus Fault Handler
         DCD     UsageFault_Handler        ; Usage Fault Handler
@@ -182,25 +207,26 @@ AFT_INTVEC:
 ;;
 ;; Default interrupt handlers.
 ;;
+;;extern  void STM32Fx_COLD_FISH();
+;;extern  int main(); __cmain
         THUMB
         PUBWEAK Reset_Handler
-        SECTION .text:CODE:REORDER(2)
-Reset_Handler
+        SECTION .text:CODE:REORDER(1)
+Reset_Handler   ; _iar_program_start label gone?
+        ;B       _iar_program_start
         B      STM32Fx_COLD_FISH
+        ;B       Reset_Handler
 
         PUBWEAK NMI_Handler
         SECTION .text:CODE:REORDER(1)
 NMI_Handler
         B NMI_Handler
 
-#ifdef CMSIS_ASM
         PUBWEAK HardFault_Handler
         SECTION .text:CODE:REORDER(1)
 HardFault_Handler
-;        B HardFault_Handler
-        B NVIC_SystemReset
-;        B      STM32Fx_COLD_FISH
-#endif
+        B HardFault_Handler     ;; defined in main.c
+;        B NVIC_SystemReset
 
         PUBWEAK MemManage_Handler
         SECTION .text:CODE:REORDER(1)

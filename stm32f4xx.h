@@ -70,6 +70,8 @@
   /* #define STM32F427X */   /*!< STM32F427x/437x Devices */
   /* #define STM32F429X */   /*!< STM32F429x/439x Devices */
 #endif
+// FISH 205/407
+#define STM32F4XX
 
 
 /*  Tip: To avoid modifying this file each time you need to switch between these

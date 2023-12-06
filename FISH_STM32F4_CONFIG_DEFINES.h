@@ -1,7 +1,8 @@
 // FISH_STM32F4_CONFIG_DEFINES.h
 // FISH #defines for system wide control
-// this define must keep RESET!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//#define USE_CMAIN     // Affects cstartup_M.c FM0_COLD and RET2c
+// Doc with better location and externalk call Cooperation INSITE.
+#define USE_CMAIN     // Affects cstartup_M.c FM0_COLD and RET2c
+
 #define XON_XOFF        // Use XON_XOFF Flow Control
 //#defin SMALL_RM       // Pare some words for small targets like the 812
 //#define CTS_RTS       // Use Hardware Flow Control

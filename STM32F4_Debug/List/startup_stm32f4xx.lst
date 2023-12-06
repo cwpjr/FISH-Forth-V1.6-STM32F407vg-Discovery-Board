@@ -1,0 +1,2174 @@
+###############################################################################
+#                                                                             #
+#     IAR Assembler V8.22.1.15669/W32 for ARM 26/Oct/2023  18:35:40           #
+#     Copyright 1999-2018 IAR Systems AB.                                     #
+#                                                                             #
+#           Source file   =  C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\startup_stm32f4xx.s#
+#           List file     =  C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\List\startup_stm32f4xx.lst#
+#           Object file   =  C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\Obj\startup_stm32f4xx.o#
+#           Command line  =  -f C:\Users\owner\AppData\Local\Temp\EW4286.tmp  #
+#                            (C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\startup_stm32f4xx.s #
+#                            -OC:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\Obj #
+#                            -s+ -M<> -w+ -r -j -DFISH_PubRel_WORDSET         #
+#                            -DFISH_Debug_WORDSET -DSTM32F4_XRC08_168MHZ      #
+#                            -LC:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F407vg-Discovery-Board\STM32F4_Debug\List #
+#                            -t8 --cpu Cortex-M4 --fpu None)                  #
+#                                                                             #
+###############################################################################
+
+                                Reset_Handler   ; _iar_program_start label
+                        gone?
+                                ------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",193 
+                        Warning[25]: Label 'Reset_Han
+                                dler' is defined pubweak in a section
+                        implicitly declared root
+                                NMI_Handler
+                                ----------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",200 
+                        Warning[25]: Label 'NMI_Handl
+                                er' is defined pubweak in a section implicitly
+                        declared root
+                                HardFault_Handler
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",205 
+                        Warning[25]: Label 'HardFault
+                                _Handler' is defined pubweak in a section
+                        implicitly declared root
+                                MemManage_Handler
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",211 
+                        Warning[25]: Label 'MemManage
+                                _Handler' is defined pubweak in a section
+                        implicitly declared root
+                                BusFault_Handler
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",216 
+                        Warning[25]: Label 'BusFault_
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                UsageFault_Handler
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",221 
+                        Warning[25]: Label 'UsageFaul
+                                t_Handler' is defined pubweak in a section
+                        implicitly declared root
+                                SVC_Handler
+                                ----------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",226 
+                        Warning[25]: Label 'SVC_Handl
+                                er' is defined pubweak in a section implicitly
+                        declared root
+                                DebugMon_Handler
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",231 
+                        Warning[25]: Label 'DebugMon_
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                PendSV_Handler
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",236 
+                        Warning[25]: Label 'PendSV_Ha
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+                                SysTick_Handler
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",241 
+                        Warning[25]: Label 'SysTick_H
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                WWDG_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",248 
+                        Warning[25]: Label 'WWDG_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                PVD_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",253 
+                        Warning[25]: Label 'PVD_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+                                TAMP_STAMP_IRQHandler  
+                                --------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",258 
+                        Warning[25]: Label 'TAMP_STAM
+                                P_IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                RTC_WKUP_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",263 
+                        Warning[25]: Label 'RTC_WKUP_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                FLASH_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",268 
+                        Warning[25]: Label 'FLASH_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                RCC_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",273 
+                        Warning[25]: Label 'RCC_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI0_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",278 
+                        Warning[25]: Label 'EXTI0_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI1_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",283 
+                        Warning[25]: Label 'EXTI1_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI2_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",288 
+                        Warning[25]: Label 'EXTI2_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI3_IRQHandler
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",293 
+                        Warning[25]: Label 'EXTI3_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI4_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",298 
+                        Warning[25]: Label 'EXTI4_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                DMA1_Stream0_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",303 
+                        Warning[25]: Label 'DMA1_Stre
+                                am0_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA1_Stream1_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",308 
+                        Warning[25]: Label 'DMA1_Stre
+                                am1_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA1_Stream2_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",313 
+                        Warning[25]: Label 'DMA1_Stre
+                                am2_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA1_Stream3_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",318 
+                        Warning[25]: Label 'DMA1_Stre
+                                am3_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA1_Stream4_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",323 
+                        Warning[25]: Label 'DMA1_Stre
+                                am4_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA1_Stream5_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",328 
+                        Warning[25]: Label 'DMA1_Stre
+                                am5_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA1_Stream6_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",333 
+                        Warning[25]: Label 'DMA1_Stre
+                                am6_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                ADC_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",338 
+                        Warning[25]: Label 'ADC_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN1_TX_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",343 
+                        Warning[25]: Label 'CAN1_TX_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN1_RX0_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",348 
+                        Warning[25]: Label 'CAN1_RX0_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN1_RX1_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",353 
+                        Warning[25]: Label 'CAN1_RX1_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN1_SCE_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",358 
+                        Warning[25]: Label 'CAN1_SCE_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI9_5_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",363 
+                        Warning[25]: Label 'EXTI9_5_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM1_BRK_TIM9_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",368 
+                        Warning[25]: Label 'TIM1_BRK_
+                                TIM9_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                TIM1_UP_TIM10_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",373 
+                        Warning[25]: Label 'TIM1_UP_T
+                                IM10_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                TIM1_TRG_COM_TIM11_IRQHandler  
+                                ----------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",378 
+                        Warning[25]: Label 'TIM1_TRG_
+                                COM_TIM11_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                TIM1_CC_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",383 
+                        Warning[25]: Label 'TIM1_CC_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM2_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",388 
+                        Warning[25]: Label 'TIM2_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM3_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",393 
+                        Warning[25]: Label 'TIM3_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM4_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",398 
+                        Warning[25]: Label 'TIM4_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                I2C1_EV_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",403 
+                        Warning[25]: Label 'I2C1_EV_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                I2C1_ER_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",408 
+                        Warning[25]: Label 'I2C1_ER_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                I2C2_EV_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",413 
+                        Warning[25]: Label 'I2C2_EV_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                I2C2_ER_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",418 
+                        Warning[25]: Label 'I2C2_ER_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                SPI1_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",423 
+                        Warning[25]: Label 'SPI1_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                SPI2_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",428 
+                        Warning[25]: Label 'SPI2_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                USART1_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",433 
+                        Warning[25]: Label 'USART1_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+                                USART2_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",438 
+                        Warning[25]: Label 'USART2_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+                                USART3_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",443 
+                        Warning[25]: Label 'USART3_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+                                EXTI15_10_IRQHandler  
+                                -------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",448 
+                        Warning[25]: Label 'EXTI15_10
+                                _IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                RTC_Alarm_IRQHandler  
+                                -------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",453 
+                        Warning[25]: Label 'RTC_Alarm
+                                _IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                OTG_FS_WKUP_IRQHandler  
+                                ---------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",458 
+                        Warning[25]: Label 'OTG_FS_WK
+                                UP_IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM8_BRK_TIM12_IRQHandler  
+                                ------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",463 
+                        Warning[25]: Label 'TIM8_BRK_
+                                TIM12_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                TIM8_UP_TIM13_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",468 
+                        Warning[25]: Label 'TIM8_UP_T
+                                IM13_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                TIM8_TRG_COM_TIM14_IRQHandler  
+                                ----------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",473 
+                        Warning[25]: Label 'TIM8_TRG_
+                                COM_TIM14_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                TIM8_CC_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",478 
+                        Warning[25]: Label 'TIM8_CC_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                DMA1_Stream7_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",483 
+                        Warning[25]: Label 'DMA1_Stre
+                                am7_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                FSMC_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",488 
+                        Warning[25]: Label 'FSMC_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                SDIO_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",493 
+                        Warning[25]: Label 'SDIO_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM5_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",498 
+                        Warning[25]: Label 'TIM5_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                SPI3_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",503 
+                        Warning[25]: Label 'SPI3_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                UART4_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",508 
+                        Warning[25]: Label 'UART4_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                UART5_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",513 
+                        Warning[25]: Label 'UART5_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM6_DAC_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",518 
+                        Warning[25]: Label 'TIM6_DAC_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                TIM7_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",523 
+                        Warning[25]: Label 'TIM7_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                DMA2_Stream0_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",528 
+                        Warning[25]: Label 'DMA2_Stre
+                                am0_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA2_Stream1_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",533 
+                        Warning[25]: Label 'DMA2_Stre
+                                am1_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA2_Stream2_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",538 
+                        Warning[25]: Label 'DMA2_Stre
+                                am2_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA2_Stream3_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",543 
+                        Warning[25]: Label 'DMA2_Stre
+                                am3_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA2_Stream4_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",548 
+                        Warning[25]: Label 'DMA2_Stre
+                                am4_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                ETH_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",553 
+                        Warning[25]: Label 'ETH_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+                                ETH_WKUP_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",558 
+                        Warning[25]: Label 'ETH_WKUP_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN2_TX_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",563 
+                        Warning[25]: Label 'CAN2_TX_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN2_RX0_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",568 
+                        Warning[25]: Label 'CAN2_RX0_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN2_RX1_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",573 
+                        Warning[25]: Label 'CAN2_RX1_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                CAN2_SCE_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",578 
+                        Warning[25]: Label 'CAN2_SCE_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                OTG_FS_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",583 
+                        Warning[25]: Label 'OTG_FS_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+                                DMA2_Stream5_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",588 
+                        Warning[25]: Label 'DMA2_Stre
+                                am5_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA2_Stream6_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",593 
+                        Warning[25]: Label 'DMA2_Stre
+                                am6_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                DMA2_Stream7_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",598 
+                        Warning[25]: Label 'DMA2_Stre
+                                am7_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                USART6_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",603 
+                        Warning[25]: Label 'USART6_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+                                I2C3_EV_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",608 
+                        Warning[25]: Label 'I2C3_EV_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                I2C3_ER_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",613 
+                        Warning[25]: Label 'I2C3_ER_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                OTG_HS_EP1_OUT_IRQHandler  
+                                ------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",618 
+                        Warning[25]: Label 'OTG_HS_EP
+                                1_OUT_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                OTG_HS_EP1_IN_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",623 
+                        Warning[25]: Label 'OTG_HS_EP
+                                1_IN_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+                                OTG_HS_WKUP_IRQHandler  
+                                ---------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",628 
+                        Warning[25]: Label 'OTG_HS_WK
+                                UP_IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                OTG_HS_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",633 
+                        Warning[25]: Label 'OTG_HS_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+                                DCMI_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",638 
+                        Warning[25]: Label 'DCMI_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                CRYP_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",643 
+                        Warning[25]: Label 'CRYP_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+                                HASH_RNG_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",648 
+                        Warning[25]: Label 'HASH_RNG_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+                                FPU_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",653 
+                        Warning[25]: Label 'FPU_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+
+
+    1                           ;/******************* (C) COPYRIGHT 2012
+                                 STMicroelectronics ********************
+    2                           ;* File Name          : startup_stm32f4xx.s
+    3                           ;* Author             : MCD Application
+                                 Team
+    4                           ;* Version            : V1.0.2
+    5                           ;* Date               : 05-March-2012
+    6                           ;* Description        : STM32F4xx devices
+                                 vector table for EWARM toolchain.
+    7                           ;*                      This module performs:
+    8                           ;*                      - Set the initial
+                                 SP
+    9                           ;*                      - Set the initial PC
+                                 == _iar_program_start,
+   10                           ;*                      - Set the vector table
+                                 entries with the exceptions ISR 
+   11                           ;*                        address.
+   12                           ;*                      - Configure the system
+                                 clock and the external SRAM mounted on
+                                 
+   13                           ;*                        STM324xG-EVAL board
+                                 to be used as data memory (optional,
+                                 
+   14                           ;*                        to be enabled by
+                                 user)
+   15                           ;*                      - Branches to main in
+                                 the C library (which eventually
+   16                           ;*                        calls main()).
+   17                           ;*                      After Reset the
+                                 Cortex-M4 processor is in Thread mode,
+   18                           ;*                      priority is Privileged
+                                , and the Stack is set to Main.
+   19                           ;*********************************************
+                                **********************************
+   20                           ;* 
+   21                           ;* Licensed under MCD-ST Liberty SW License
+                                 Agreement V2, (the "License");
+   22                           ;* You may not use this file except in
+                                 compliance with the License.
+   23                           ;* You may obtain a copy of the License
+                                 at:
+   24                           ;* 
+   25                           ;*        http://www.st.com/software_license_a
+                                greement_liberty_v2
+   26                           ;* 
+   27                           ;* Unless required by applicable law or agreed
+                                 to in writing, software 
+   28                           ;* distributed under the License is distribute
+                                d on an "AS IS" BASIS, 
+   29                           ;* WITHOUT WARRANTIES OR CONDITIONS OF ANY
+                                 KIND, either express or implied.
+   30                           ;* See the License for the specific language
+                                 governing permissions and
+   31                           ;* limitations under the License.
+   32                           ;* 
+   33                           ;*********************************************
+                                **********************************/
+   34                           ;
+   35                           ;
+   36                           ; The modules in this file are included in the
+                                 libraries, and may be replaced
+   37                           ; by any user-defined modules that define the
+                                 PUBLIC symbol _program_start or
+   38                           ; a user defined start symbol.
+   39                           ; To override the cstartup defined in the
+                                 library, simply add your modified
+   40                           ; version to the workbench project.
+   41                           ;
+   42                           ; The vector table is normally located at
+                                 address 0.
+   43                           ; When debugging in RAM, it can be located in
+                                 RAM, aligned to at least 2^6.
+   44                           ; The name "__vector_table" has special
+                                 meaning for C-SPY:
+   45                           ; it is where the SP start value is found, and
+                                 the NVIC vector
+   46                           ; table register (VTOR) is initialized to this
+                                 address if != 0.
+   47                           ;
+   48                           ; Cortex-M version
+   49                           ;
+   50                           
+   51                           ; FISH STM32F4 DISCO
+   52                           
+   53                           #define CMSIS_C // __weak void HardFault_Handl
+                                er( void ) { NVIC_SystemReset(); }
+   54                           #define CMSIS_ASM
+   55                           
+   56                           //      MODULE  ?cstartup       //????
+   57                                   AAPCS INTERWORK, VFP_COMPATIBLE,
+                                 RWPI_COMPATIBLE
+   58                                   PRESERVE8
+   59                           
+   60                                   ;; Forward declaration of sections.
+   61                                   SECTION CSTACK:DATA:NOROOT(3)
+   62                           // root keyword is used to ensure that the
+                                 vector table is not removed by the linker.
+                                 
+   63                                   SECTION .intvec:CODE:ROOT(2)
+   64                           
+   65                           ;#ifdef CMSIS_C        
+   66                           ;        EXTERN  HardFault_Handler
+   67                           ;#endif
+   68                           
+   69                                   EXTERN  FMx_SYSTICK_ISR
+   70                                   EXTERN  __iar_program_start
+   71                                   EXTERN  STM32Fx_COLD_FISH
+   72                                   EXTERN  NVIC_SystemReset
+   73                                   
+   74                                   PUBLIC  __vector_table
+   75                           
+   76                                   DATA
+   77                           __vector_table
+   78                           ;        DCD     sfe(CSTACK)
+   79    00000000 00000020               DCD 0x20000000 ; 0x0 ; 0x2001FFFF ;
+  SDRAM_TRUE_END  ; sfe(CSTACK)
+   80                           ; Change to STM32Fx_COLD_FISH bypasses run to
+                                 STM32Fx_COLD_FISH function in debugger
+   81                           ; Reset_Handler B STM32Fx_COLD_FISH allows
+                                 debugger to stop there.
+   82    00000004 ........              DCD     Reset_Handler             ;
+  Reset_Handler ; STM32Fx_COLD_FISH
+   83                           ; undefined error        DCD     STM32Fx_COLD_
+                                FISH             ; Reset_Handler ; STM32Fx_COLD
+                                _FISH
+   84    00000008 ........              DCD     NMI_Handler               ; NMI
+  Handler
+   85                           ;        DCD     HardFault_Handler         ;
+                                 Hard Fault Handler
+   86    0000000C ........              DCD     NVIC_SystemReset         ; Hard
+                                                                          Fault
+                                                                          Handl
+                                                                         er
+   87    00000010 ........              DCD     MemManage_Handler         ; MPU
+  Fault Handler
+   88    00000014 ........              DCD     BusFault_Handler          ; Bus
+  Fault Handler
+   89    00000018 ........              DCD     UsageFault_Handler        ;
+  Usage Fault Handler
+   90    0000001C 00000000              DCD     0                         ;
+  Reserved
+   91    00000020 00000000              DCD     0                         ;
+  Reserved
+   92    00000024 00000000              DCD     0                         ;
+  Reserved
+   93    00000028 00000000              DCD     0                         ;
+  Reserved
+   94    0000002C ........              DCD     SVC_Handler               ;
+  SVCall Handler
+   95    00000030 ........              DCD     DebugMon_Handler          ;
+  Debug Monitor Handler
+   96    00000034 00000000              DCD     0                         ;
+  Reserved
+   97    00000038 ........              DCD     PendSV_Handler            ;
+  PendSV Handler
+   98    0000003C ........              DCD     SysTick_Handler           ;
+  SysTick Handler
+   99                           
+  100                                    ; External Interrupts
+  101    00000040 ........              DCD     WWDG_IRQHandler                
+    ; Window WatchDog                                        
+  102    00000044 ........              DCD     PVD_IRQHandler                 
+    ; PVD through EXTI Line detection                        
+  103    00000048 ........              DCD     TAMP_STAMP_IRQHandler          
+    ; Tamper and TimeStamps through the EXTI line            
+  104    0000004C ........              DCD     RTC_WKUP_IRQHandler            
+    ; RTC Wakeup through the EXTI line                       
+  105    00000050 ........              DCD     FLASH_IRQHandler               
+    ; FLASH                                           
+  106    00000054 ........              DCD     RCC_IRQHandler                 
+    ; RCC                                             
+  107    00000058 ........              DCD     EXTI0_IRQHandler               
+    ; EXTI Line0                                             
+  108    0000005C ........              DCD     EXTI1_IRQHandler               
+    ; EXTI Line1                                             
+  109    00000060 ........              DCD     EXTI2_IRQHandler               
+    ; EXTI Line2                                             
+  110    00000064 ........              DCD     EXTI3_IRQHandler               
+    ; EXTI Line3                                             
+  111    00000068 ........              DCD     EXTI4_IRQHandler               
+    ; EXTI Line4                                             
+  112    0000006C ........              DCD     DMA1_Stream0_IRQHandler        
+    ; DMA1 Stream 0                                   
+  113    00000070 ........              DCD     DMA1_Stream1_IRQHandler        
+    ; DMA1 Stream 1                                   
+  114    00000074 ........              DCD     DMA1_Stream2_IRQHandler        
+    ; DMA1 Stream 2                                   
+  115    00000078 ........              DCD     DMA1_Stream3_IRQHandler        
+    ; DMA1 Stream 3                                   
+  116    0000007C ........              DCD     DMA1_Stream4_IRQHandler        
+    ; DMA1 Stream 4                                   
+  117    00000080 ........              DCD     DMA1_Stream5_IRQHandler        
+    ; DMA1 Stream 5                                   
+  118    00000084 ........              DCD     DMA1_Stream6_IRQHandler        
+    ; DMA1 Stream 6                                   
+  119    00000088 ........              DCD     ADC_IRQHandler                 
+    ; ADC1, ADC2 and ADC3s                            
+  120    0000008C ........              DCD     CAN1_TX_IRQHandler             
+    ; CAN1 TX                                                
+  121    00000090 ........              DCD     CAN1_RX0_IRQHandler            
+    ; CAN1 RX0                                               
+  122    00000094 ........              DCD     CAN1_RX1_IRQHandler            
+    ; CAN1 RX1                                               
+  123    00000098 ........              DCD     CAN1_SCE_IRQHandler            
+    ; CAN1 SCE                                               
+  124    0000009C ........              DCD     EXTI9_5_IRQHandler             
+    ; External Line[9:5]s                                    
+  125    000000A0 ........              DCD     TIM1_BRK_TIM9_IRQHandler       
+    ; TIM1 Break and TIM9                   
+  126    000000A4 ........              DCD     TIM1_UP_TIM10_IRQHandler       
+    ; TIM1 Update and TIM10                 
+  127    000000A8 ........              DCD     TIM1_TRG_COM_TIM11_IRQHandler  
+    ; TIM1 Trigger and Commutation and TIM11
+  128    000000AC ........              DCD     TIM1_CC_IRQHandler             
+    ; TIM1 Capture Compare                                   
+  129    000000B0 ........              DCD     TIM2_IRQHandler                
+    ; TIM2                                            
+  130    000000B4 ........              DCD     TIM3_IRQHandler                
+    ; TIM3                                            
+  131    000000B8 ........              DCD     TIM4_IRQHandler                
+    ; TIM4                                            
+  132    000000BC ........              DCD     I2C1_EV_IRQHandler             
+    ; I2C1 Event                                             
+  133    000000C0 ........              DCD     I2C1_ER_IRQHandler             
+    ; I2C1 Error                                             
+  134    000000C4 ........              DCD     I2C2_EV_IRQHandler             
+    ; I2C2 Event                                             
+  135    000000C8 ........              DCD     I2C2_ER_IRQHandler             
+    ; I2C2 Error                                               
+  136    000000CC ........              DCD     SPI1_IRQHandler                
+    ; SPI1                                            
+  137    000000D0 ........              DCD     SPI2_IRQHandler                
+    ; SPI2                                            
+  138    000000D4 ........              DCD     USART1_IRQHandler              
+    ; USART1                                          
+  139    000000D8 ........              DCD     USART2_IRQHandler              
+    ; USART2                                          
+  140    000000DC ........              DCD     USART3_IRQHandler              
+    ; USART3                                          
+  141    000000E0 ........              DCD     EXTI15_10_IRQHandler           
+    ; External Line[15:10]s                                  
+  142    000000E4 ........              DCD     RTC_Alarm_IRQHandler           
+    ; RTC Alarm (A and B) through EXTI Line                  
+  143    000000E8 ........              DCD     OTG_FS_WKUP_IRQHandler         
+    ; USB OTG FS Wakeup through EXTI line                        
+  144    000000EC ........              DCD     TIM8_BRK_TIM12_IRQHandler      
+    ; TIM8 Break and TIM12                  
+  145    000000F0 ........              DCD     TIM8_UP_TIM13_IRQHandler       
+    ; TIM8 Update and TIM13                 
+  146    000000F4 ........              DCD     TIM8_TRG_COM_TIM14_IRQHandler  
+    ; TIM8 Trigger and Commutation and TIM14
+  147    000000F8 ........              DCD     TIM8_CC_IRQHandler             
+    ; TIM8 Capture Compare                                   
+  148    000000FC ........              DCD     DMA1_Stream7_IRQHandler        
+    ; DMA1 Stream7                                           
+  149    00000100 ........              DCD     FSMC_IRQHandler                
+    ; FSMC                                            
+  150    00000104 ........              DCD     SDIO_IRQHandler                
+    ; SDIO                                            
+  151    00000108 ........              DCD     TIM5_IRQHandler                
+    ; TIM5                                            
+  152    0000010C ........              DCD     SPI3_IRQHandler                
+    ; SPI3                                            
+  153    00000110 ........              DCD     UART4_IRQHandler               
+    ; UART4                                           
+  154    00000114 ........              DCD     UART5_IRQHandler               
+    ; UART5                                           
+  155    00000118 ........              DCD     TIM6_DAC_IRQHandler            
+    ; TIM6 and DAC1&2 underrun errors                   
+  156    0000011C ........              DCD     TIM7_IRQHandler                
+    ; TIM7                   
+  157    00000120 ........              DCD     DMA2_Stream0_IRQHandler        
+    ; DMA2 Stream 0                                   
+  158    00000124 ........              DCD     DMA2_Stream1_IRQHandler        
+    ; DMA2 Stream 1                                   
+  159    00000128 ........              DCD     DMA2_Stream2_IRQHandler        
+    ; DMA2 Stream 2                                   
+  160    0000012C ........              DCD     DMA2_Stream3_IRQHandler        
+    ; DMA2 Stream 3                                   
+  161    00000130 ........              DCD     DMA2_Stream4_IRQHandler        
+    ; DMA2 Stream 4                                   
+  162    00000134 ........              DCD     ETH_IRQHandler                 
+    ; Ethernet                                        
+  163    00000138 ........              DCD     ETH_WKUP_IRQHandler            
+    ; Ethernet Wakeup through EXTI line                      
+  164    0000013C ........              DCD     CAN2_TX_IRQHandler             
+    ; CAN2 TX                                                
+  165    00000140 ........              DCD     CAN2_RX0_IRQHandler            
+    ; CAN2 RX0                                               
+  166    00000144 ........              DCD     CAN2_RX1_IRQHandler            
+    ; CAN2 RX1                                               
+  167    00000148 ........              DCD     CAN2_SCE_IRQHandler            
+    ; CAN2 SCE                                               
+  168    0000014C ........              DCD     OTG_FS_IRQHandler              
+    ; USB OTG FS                                      
+  169    00000150 ........              DCD     DMA2_Stream5_IRQHandler        
+    ; DMA2 Stream 5                                   
+  170    00000154 ........              DCD     DMA2_Stream6_IRQHandler        
+    ; DMA2 Stream 6                                   
+  171    00000158 ........              DCD     DMA2_Stream7_IRQHandler        
+    ; DMA2 Stream 7                                   
+  172    0000015C ........              DCD     USART6_IRQHandler              
+    ; USART6                                           
+  173    00000160 ........              DCD     I2C3_EV_IRQHandler             
+    ; I2C3 event                                             
+  174    00000164 ........              DCD     I2C3_ER_IRQHandler             
+    ; I2C3 error                                             
+  175    00000168 ........              DCD     OTG_HS_EP1_OUT_IRQHandler      
+    ; USB OTG HS End Point 1 Out                      
+  176    0000016C ........              DCD     OTG_HS_EP1_IN_IRQHandler       
+    ; USB OTG HS End Point 1 In                       
+  177    00000170 ........              DCD     OTG_HS_WKUP_IRQHandler         
+    ; USB OTG HS Wakeup through EXTI                         
+  178    00000174 ........              DCD     OTG_HS_IRQHandler              
+    ; USB OTG HS                                      
+  179    00000178 ........              DCD     DCMI_IRQHandler                
+    ; DCMI                                            
+  180    0000017C ........              DCD     CRYP_IRQHandler                
+    ; CRYP crypto                                     
+  181    00000180 ........              DCD     HASH_RNG_IRQHandler            
+    ; Hash and Rng
+  182    00000184 ........              DCD     FPU_IRQHandler                 
+    ; FPU
+  183                           AFT_INTVEC:
+  184                           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+                                ;;;;;;
+  185                           ;;
+  186                           ;; Default interrupt handlers.
+  187                           ;;
+  188                           ;;extern  void STM32Fx_COLD_FISH();
+  189                           ;;extern  int main(); __cmain
+  190                                   THUMB
+  191                                   PUBWEAK Reset_Handler
+  192                                   SECTION .text:CODE:REORDER(1)
+  193                           Reset_Handler   ; _iar_program_start label
+                                 gone?
+                                Reset_Handler   ; _iar_program_start label
+                        gone?
+                                ------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",193 
+                        Warning[25]: Label 'Reset_Han
+                                dler' is defined pubweak in a section
+                        implicitly declared root
+  194                                   ;B       _iar_program_start
+  195                                   ;B      STM32Fx_COLD_FISH
+  196                                   ;B       Reset_Handler
+  197                           
+  198                                   PUBWEAK NMI_Handler
+  199                                   SECTION .text:CODE:REORDER(1)
+  200                           NMI_Handler
+                                NMI_Handler
+                                ----------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",200 
+                        Warning[25]: Label 'NMI_Handl
+                                er' is defined pubweak in a section implicitly
+                        declared root
+  201    00000000 ........              B NMI_Handler
+  202                           
+  203                                   PUBWEAK HardFault_Handler
+  204                                   SECTION .text:CODE:REORDER(1)
+  205                           HardFault_Handler
+                                HardFault_Handler
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",205 
+                        Warning[25]: Label 'HardFault
+                                _Handler' is defined pubweak in a section
+                        implicitly declared root
+  206    00000000 ........              B HardFault_Handler     ;; defined in
+                                                                 main.c
+  207                           ;        B NVIC_SystemReset()
+  208                           
+  209                                   PUBWEAK MemManage_Handler
+  210                                   SECTION .text:CODE:REORDER(1)
+  211                           MemManage_Handler
+                                MemManage_Handler
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",211 
+                        Warning[25]: Label 'MemManage
+                                _Handler' is defined pubweak in a section
+                        implicitly declared root
+  212    00000000 ........              B MemManage_Handler
+  213                           
+  214                                   PUBWEAK BusFault_Handler
+  215                                   SECTION .text:CODE:REORDER(1)
+  216                           BusFault_Handler
+                                BusFault_Handler
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",216 
+                        Warning[25]: Label 'BusFault_
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  217    00000000 ........              B BusFault_Handler
+  218                           
+  219                                   PUBWEAK UsageFault_Handler
+  220                                   SECTION .text:CODE:REORDER(1)
+  221                           UsageFault_Handler
+                                UsageFault_Handler
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",221 
+                        Warning[25]: Label 'UsageFaul
+                                t_Handler' is defined pubweak in a section
+                        implicitly declared root
+  222    00000000 ........              B UsageFault_Handler
+  223                           
+  224                                   PUBWEAK SVC_Handler
+  225                                   SECTION .text:CODE:REORDER(1)
+  226                           SVC_Handler
+                                SVC_Handler
+                                ----------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",226 
+                        Warning[25]: Label 'SVC_Handl
+                                er' is defined pubweak in a section implicitly
+                        declared root
+  227    00000000 ........              B SVC_Handler
+  228                           
+  229                                   PUBWEAK DebugMon_Handler
+  230                                   SECTION .text:CODE:REORDER(1)
+  231                           DebugMon_Handler
+                                DebugMon_Handler
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",231 
+                        Warning[25]: Label 'DebugMon_
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  232    00000000 ........              B DebugMon_Handler
+  233                           
+  234                                   PUBWEAK PendSV_Handler
+  235                                   SECTION .text:CODE:REORDER(1)
+  236                           PendSV_Handler
+                                PendSV_Handler
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",236 
+                        Warning[25]: Label 'PendSV_Ha
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+  237    00000000 ........              B PendSV_Handler
+  238                           
+  239                                   PUBWEAK SysTick_Handler
+  240                                   SECTION .text:CODE:REORDER(1)
+  241                           SysTick_Handler
+                                SysTick_Handler
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",241 
+                        Warning[25]: Label 'SysTick_H
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  242                           ;{ FM0_SYSTICK_ISR(); /* while (0) {} */
+                                 }
+  243                           ;        B SysTick_Handler
+  244    00000000 ........              B FMx_SYSTICK_ISR
+  245                           
+  246                                   PUBWEAK WWDG_IRQHandler
+  247                                   SECTION .text:CODE:REORDER(1)
+  248                           WWDG_IRQHandler  
+                                WWDG_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",248 
+                        Warning[25]: Label 'WWDG_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  249    00000000 ........              B WWDG_IRQHandler
+  250                           
+  251                                   PUBWEAK PVD_IRQHandler
+  252                                   SECTION .text:CODE:REORDER(1)
+  253                           PVD_IRQHandler  
+                                PVD_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",253 
+                        Warning[25]: Label 'PVD_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+  254    00000000 ........              B PVD_IRQHandler
+  255                           
+  256                                   PUBWEAK TAMP_STAMP_IRQHandler
+  257                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  258                           TAMP_STAMP_IRQHandler  
+                                TAMP_STAMP_IRQHandler  
+                                --------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",258 
+                        Warning[25]: Label 'TAMP_STAM
+                                P_IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  259    00000000 ........              B TAMP_STAMP_IRQHandler
+  260                           
+  261                                   PUBWEAK RTC_WKUP_IRQHandler
+  262                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  263                           RTC_WKUP_IRQHandler  
+                                RTC_WKUP_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",263 
+                        Warning[25]: Label 'RTC_WKUP_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  264    00000000 ........              B RTC_WKUP_IRQHandler
+  265                           
+  266                                   PUBWEAK FLASH_IRQHandler
+  267                                   SECTION .text:CODE:REORDER(1)
+  268                           FLASH_IRQHandler  
+                                FLASH_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",268 
+                        Warning[25]: Label 'FLASH_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  269    00000000 ........              B FLASH_IRQHandler
+  270                           
+  271                                   PUBWEAK RCC_IRQHandler
+  272                                   SECTION .text:CODE:REORDER(1)
+  273                           RCC_IRQHandler  
+                                RCC_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",273 
+                        Warning[25]: Label 'RCC_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+  274    00000000 ........              B RCC_IRQHandler
+  275                           
+  276                                   PUBWEAK EXTI0_IRQHandler
+  277                                   SECTION .text:CODE:REORDER(1)
+  278                           EXTI0_IRQHandler  
+                                EXTI0_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",278 
+                        Warning[25]: Label 'EXTI0_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  279    00000000 ........              B EXTI0_IRQHandler
+  280                           
+  281                                   PUBWEAK EXTI1_IRQHandler
+  282                                   SECTION .text:CODE:REORDER(1)
+  283                           EXTI1_IRQHandler  
+                                EXTI1_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",283 
+                        Warning[25]: Label 'EXTI1_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  284    00000000 ........              B EXTI1_IRQHandler
+  285                           
+  286                                   PUBWEAK EXTI2_IRQHandler
+  287                                   SECTION .text:CODE:REORDER(1)
+  288                           EXTI2_IRQHandler  
+                                EXTI2_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",288 
+                        Warning[25]: Label 'EXTI2_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  289    00000000 ........              B EXTI2_IRQHandler
+  290                           
+  291                                   PUBWEAK EXTI3_IRQHandler
+  292                                   SECTION .text:CODE:REORDER(1)
+  293                           EXTI3_IRQHandler
+                                EXTI3_IRQHandler
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",293 
+                        Warning[25]: Label 'EXTI3_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  294    00000000 ........              B EXTI3_IRQHandler
+  295                           
+  296                                   PUBWEAK EXTI4_IRQHandler
+  297                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  298                           EXTI4_IRQHandler  
+                                EXTI4_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",298 
+                        Warning[25]: Label 'EXTI4_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  299    00000000 ........              B EXTI4_IRQHandler
+  300                           
+  301                                   PUBWEAK DMA1_Stream0_IRQHandler
+  302                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  303                           DMA1_Stream0_IRQHandler  
+                                DMA1_Stream0_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",303 
+                        Warning[25]: Label 'DMA1_Stre
+                                am0_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  304    00000000 ........              B DMA1_Stream0_IRQHandler
+  305                           
+  306                                   PUBWEAK DMA1_Stream1_IRQHandler
+  307                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  308                           DMA1_Stream1_IRQHandler  
+                                DMA1_Stream1_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",308 
+                        Warning[25]: Label 'DMA1_Stre
+                                am1_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  309    00000000 ........              B DMA1_Stream1_IRQHandler
+  310                           
+  311                                   PUBWEAK DMA1_Stream2_IRQHandler
+  312                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  313                           DMA1_Stream2_IRQHandler  
+                                DMA1_Stream2_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",313 
+                        Warning[25]: Label 'DMA1_Stre
+                                am2_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  314    00000000 ........              B DMA1_Stream2_IRQHandler
+  315                           
+  316                                   PUBWEAK DMA1_Stream3_IRQHandler
+  317                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  318                           DMA1_Stream3_IRQHandler  
+                                DMA1_Stream3_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",318 
+                        Warning[25]: Label 'DMA1_Stre
+                                am3_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  319    00000000 ........              B DMA1_Stream3_IRQHandler
+  320                           
+  321                                   PUBWEAK DMA1_Stream4_IRQHandler
+  322                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  323                           DMA1_Stream4_IRQHandler  
+                                DMA1_Stream4_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",323 
+                        Warning[25]: Label 'DMA1_Stre
+                                am4_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  324    00000000 ........              B DMA1_Stream4_IRQHandler
+  325                           
+  326                                   PUBWEAK DMA1_Stream5_IRQHandler
+  327                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  328                           DMA1_Stream5_IRQHandler  
+                                DMA1_Stream5_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",328 
+                        Warning[25]: Label 'DMA1_Stre
+                                am5_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  329    00000000 ........              B DMA1_Stream5_IRQHandler
+  330                           
+  331                                   PUBWEAK DMA1_Stream6_IRQHandler
+  332                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  333                           DMA1_Stream6_IRQHandler  
+                                DMA1_Stream6_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",333 
+                        Warning[25]: Label 'DMA1_Stre
+                                am6_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  334    00000000 ........              B DMA1_Stream6_IRQHandler
+  335                           
+  336                                   PUBWEAK ADC_IRQHandler
+  337                                   SECTION .text:CODE:REORDER(1)
+  338                           ADC_IRQHandler  
+                                ADC_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",338 
+                        Warning[25]: Label 'ADC_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+  339    00000000 ........              B ADC_IRQHandler
+  340                           
+  341                                   PUBWEAK CAN1_TX_IRQHandler
+  342                                   SECTION .text:CODE:REORDER(1)
+                                 
+  343                           CAN1_TX_IRQHandler  
+                                CAN1_TX_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",343 
+                        Warning[25]: Label 'CAN1_TX_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  344    00000000 ........              B CAN1_TX_IRQHandler
+  345                           
+  346                                   PUBWEAK CAN1_RX0_IRQHandler
+  347                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  348                           CAN1_RX0_IRQHandler  
+                                CAN1_RX0_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",348 
+                        Warning[25]: Label 'CAN1_RX0_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  349    00000000 ........              B CAN1_RX0_IRQHandler
+  350                           
+  351                                   PUBWEAK CAN1_RX1_IRQHandler
+  352                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  353                           CAN1_RX1_IRQHandler  
+                                CAN1_RX1_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",353 
+                        Warning[25]: Label 'CAN1_RX1_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  354    00000000 ........              B CAN1_RX1_IRQHandler
+  355                           
+  356                                   PUBWEAK CAN1_SCE_IRQHandler
+  357                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  358                           CAN1_SCE_IRQHandler  
+                                CAN1_SCE_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",358 
+                        Warning[25]: Label 'CAN1_SCE_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  359    00000000 ........              B CAN1_SCE_IRQHandler
+  360                           
+  361                                   PUBWEAK EXTI9_5_IRQHandler
+  362                                   SECTION .text:CODE:REORDER(1)
+                                 
+  363                           EXTI9_5_IRQHandler  
+                                EXTI9_5_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",363 
+                        Warning[25]: Label 'EXTI9_5_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  364    00000000 ........              B EXTI9_5_IRQHandler
+  365                           
+  366                                   PUBWEAK TIM1_BRK_TIM9_IRQHandler
+  367                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  368                           TIM1_BRK_TIM9_IRQHandler  
+                                TIM1_BRK_TIM9_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",368 
+                        Warning[25]: Label 'TIM1_BRK_
+                                TIM9_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  369    00000000 ........              B TIM1_BRK_TIM9_IRQHandler
+  370                           
+  371                                   PUBWEAK TIM1_UP_TIM10_IRQHandler
+  372                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  373                           TIM1_UP_TIM10_IRQHandler  
+                                TIM1_UP_TIM10_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",373 
+                        Warning[25]: Label 'TIM1_UP_T
+                                IM10_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  374    00000000 ........              B TIM1_UP_TIM10_IRQHandler
+  375                           
+  376                                   PUBWEAK TIM1_TRG_COM_TIM11_IRQHandler
+  377                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  378                           TIM1_TRG_COM_TIM11_IRQHandler  
+                                TIM1_TRG_COM_TIM11_IRQHandler  
+                                ----------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",378 
+                        Warning[25]: Label 'TIM1_TRG_
+                                COM_TIM11_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  379    00000000 ........              B TIM1_TRG_COM_TIM11_IRQHandler
+  380                                   
+  381                                   PUBWEAK TIM1_CC_IRQHandler
+  382                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  383                           TIM1_CC_IRQHandler  
+                                TIM1_CC_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",383 
+                        Warning[25]: Label 'TIM1_CC_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  384    00000000 ........              B TIM1_CC_IRQHandler
+  385                           
+  386                                   PUBWEAK TIM2_IRQHandler
+  387                                   SECTION .text:CODE:REORDER(1)
+  388                           TIM2_IRQHandler  
+                                TIM2_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",388 
+                        Warning[25]: Label 'TIM2_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  389    00000000 ........              B TIM2_IRQHandler
+  390                           
+  391                                   PUBWEAK TIM3_IRQHandler
+  392                                   SECTION .text:CODE:REORDER(1)
+  393                           TIM3_IRQHandler  
+                                TIM3_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",393 
+                        Warning[25]: Label 'TIM3_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  394    00000000 ........              B TIM3_IRQHandler
+  395                           
+  396                                   PUBWEAK TIM4_IRQHandler
+  397                                   SECTION .text:CODE:REORDER(1)
+  398                           TIM4_IRQHandler  
+                                TIM4_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",398 
+                        Warning[25]: Label 'TIM4_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  399    00000000 ........              B TIM4_IRQHandler
+  400                           
+  401                                   PUBWEAK I2C1_EV_IRQHandler
+  402                                   SECTION .text:CODE:REORDER(1)
+                                 
+  403                           I2C1_EV_IRQHandler  
+                                I2C1_EV_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",403 
+                        Warning[25]: Label 'I2C1_EV_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  404    00000000 ........              B I2C1_EV_IRQHandler
+  405                           
+  406                                   PUBWEAK I2C1_ER_IRQHandler
+  407                                   SECTION .text:CODE:REORDER(1)
+                                 
+  408                           I2C1_ER_IRQHandler  
+                                I2C1_ER_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",408 
+                        Warning[25]: Label 'I2C1_ER_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  409    00000000 ........              B I2C1_ER_IRQHandler
+  410                           
+  411                                   PUBWEAK I2C2_EV_IRQHandler
+  412                                   SECTION .text:CODE:REORDER(1)
+                                 
+  413                           I2C2_EV_IRQHandler  
+                                I2C2_EV_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",413 
+                        Warning[25]: Label 'I2C2_EV_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  414    00000000 ........              B I2C2_EV_IRQHandler
+  415                           
+  416                                   PUBWEAK I2C2_ER_IRQHandler
+  417                                   SECTION .text:CODE:REORDER(1)
+                                 
+  418                           I2C2_ER_IRQHandler  
+                                I2C2_ER_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",418 
+                        Warning[25]: Label 'I2C2_ER_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  419    00000000 ........              B I2C2_ER_IRQHandler
+  420                           
+  421                                   PUBWEAK SPI1_IRQHandler
+  422                                   SECTION .text:CODE:REORDER(1)
+  423                           SPI1_IRQHandler  
+                                SPI1_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",423 
+                        Warning[25]: Label 'SPI1_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  424    00000000 ........              B SPI1_IRQHandler
+  425                           
+  426                                   PUBWEAK SPI2_IRQHandler
+  427                                   SECTION .text:CODE:REORDER(1)
+  428                           SPI2_IRQHandler  
+                                SPI2_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",428 
+                        Warning[25]: Label 'SPI2_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  429    00000000 ........              B SPI2_IRQHandler
+  430                           
+  431                                   PUBWEAK USART1_IRQHandler
+  432                                   SECTION .text:CODE:REORDER(1)
+  433                           USART1_IRQHandler  
+                                USART1_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",433 
+                        Warning[25]: Label 'USART1_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+  434    00000000 ........              B USART1_IRQHandler
+  435                           
+  436                                   PUBWEAK USART2_IRQHandler
+  437                                   SECTION .text:CODE:REORDER(1)
+  438                           USART2_IRQHandler  
+                                USART2_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",438 
+                        Warning[25]: Label 'USART2_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+  439    00000000 ........              B USART2_IRQHandler
+  440                           
+  441                                   PUBWEAK USART3_IRQHandler
+  442                                   SECTION .text:CODE:REORDER(1)
+  443                           USART3_IRQHandler  
+                                USART3_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",443 
+                        Warning[25]: Label 'USART3_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+  444    00000000 ........              B USART3_IRQHandler
+  445                           
+  446                                   PUBWEAK EXTI15_10_IRQHandler
+  447                                   SECTION .text:CODE:REORDER(1)  
+                                 
+  448                           EXTI15_10_IRQHandler  
+                                EXTI15_10_IRQHandler  
+                                -------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",448 
+                        Warning[25]: Label 'EXTI15_10
+                                _IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  449    00000000 ........              B EXTI15_10_IRQHandler
+  450                           
+  451                                   PUBWEAK RTC_Alarm_IRQHandler
+  452                                   SECTION .text:CODE:REORDER(1)  
+                                 
+  453                           RTC_Alarm_IRQHandler  
+                                RTC_Alarm_IRQHandler  
+                                -------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",453 
+                        Warning[25]: Label 'RTC_Alarm
+                                _IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  454    00000000 ........              B RTC_Alarm_IRQHandler
+  455                           
+  456                                   PUBWEAK OTG_FS_WKUP_IRQHandler
+  457                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  458                           OTG_FS_WKUP_IRQHandler  
+                                OTG_FS_WKUP_IRQHandler  
+                                ---------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",458 
+                        Warning[25]: Label 'OTG_FS_WK
+                                UP_IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  459    00000000 ........              B OTG_FS_WKUP_IRQHandler
+  460                                 
+  461                                   PUBWEAK TIM8_BRK_TIM12_IRQHandler
+  462                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  463                           TIM8_BRK_TIM12_IRQHandler  
+                                TIM8_BRK_TIM12_IRQHandler  
+                                ------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",463 
+                        Warning[25]: Label 'TIM8_BRK_
+                                TIM12_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  464    00000000 ........              B TIM8_BRK_TIM12_IRQHandler
+  465                           
+  466                                   PUBWEAK TIM8_UP_TIM13_IRQHandler
+  467                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  468                           TIM8_UP_TIM13_IRQHandler  
+                                TIM8_UP_TIM13_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",468 
+                        Warning[25]: Label 'TIM8_UP_T
+                                IM13_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  469    00000000 ........              B TIM8_UP_TIM13_IRQHandler
+  470                           
+  471                                   PUBWEAK TIM8_TRG_COM_TIM14_IRQHandler
+  472                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  473                           TIM8_TRG_COM_TIM14_IRQHandler  
+                                TIM8_TRG_COM_TIM14_IRQHandler  
+                                ----------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",473 
+                        Warning[25]: Label 'TIM8_TRG_
+                                COM_TIM14_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  474    00000000 ........              B TIM8_TRG_COM_TIM14_IRQHandler
+  475                           
+  476                                   PUBWEAK TIM8_CC_IRQHandler
+  477                                   SECTION .text:CODE:REORDER(1)
+                                 
+  478                           TIM8_CC_IRQHandler  
+                                TIM8_CC_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",478 
+                        Warning[25]: Label 'TIM8_CC_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  479    00000000 ........              B TIM8_CC_IRQHandler
+  480                           
+  481                                   PUBWEAK DMA1_Stream7_IRQHandler
+  482                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  483                           DMA1_Stream7_IRQHandler  
+                                DMA1_Stream7_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",483 
+                        Warning[25]: Label 'DMA1_Stre
+                                am7_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  484    00000000 ........              B DMA1_Stream7_IRQHandler
+  485                           
+  486                                   PUBWEAK FSMC_IRQHandler
+  487                                   SECTION .text:CODE:REORDER(1)
+  488                           FSMC_IRQHandler  
+                                FSMC_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",488 
+                        Warning[25]: Label 'FSMC_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  489    00000000 ........              B FSMC_IRQHandler
+  490                           
+  491                                   PUBWEAK SDIO_IRQHandler
+  492                                   SECTION .text:CODE:REORDER(1)
+  493                           SDIO_IRQHandler  
+                                SDIO_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",493 
+                        Warning[25]: Label 'SDIO_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  494    00000000 ........              B SDIO_IRQHandler
+  495                           
+  496                                   PUBWEAK TIM5_IRQHandler
+  497                                   SECTION .text:CODE:REORDER(1)
+  498                           TIM5_IRQHandler  
+                                TIM5_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",498 
+                        Warning[25]: Label 'TIM5_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  499    00000000 ........              B TIM5_IRQHandler
+  500                           
+  501                                   PUBWEAK SPI3_IRQHandler
+  502                                   SECTION .text:CODE:REORDER(1)
+  503                           SPI3_IRQHandler  
+                                SPI3_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",503 
+                        Warning[25]: Label 'SPI3_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  504    00000000 ........              B SPI3_IRQHandler
+  505                           
+  506                                   PUBWEAK UART4_IRQHandler
+  507                                   SECTION .text:CODE:REORDER(1)
+  508                           UART4_IRQHandler  
+                                UART4_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",508 
+                        Warning[25]: Label 'UART4_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  509    00000000 ........              B UART4_IRQHandler
+  510                           
+  511                                   PUBWEAK UART5_IRQHandler
+  512                                   SECTION .text:CODE:REORDER(1)
+  513                           UART5_IRQHandler  
+                                UART5_IRQHandler  
+                                ---------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",513 
+                        Warning[25]: Label 'UART5_IRQ
+                                Handler' is defined pubweak in a section
+                        implicitly declared root
+  514    00000000 ........              B UART5_IRQHandler
+  515                           
+  516                                   PUBWEAK TIM6_DAC_IRQHandler
+  517                                   SECTION .text:CODE:REORDER(1)  
+                                 
+  518                           TIM6_DAC_IRQHandler  
+                                TIM6_DAC_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",518 
+                        Warning[25]: Label 'TIM6_DAC_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  519    00000000 ........              B TIM6_DAC_IRQHandler
+  520                           
+  521                                   PUBWEAK TIM7_IRQHandler
+  522                                   SECTION .text:CODE:REORDER(1)  
+                                 
+  523                           TIM7_IRQHandler  
+                                TIM7_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",523 
+                        Warning[25]: Label 'TIM7_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  524    00000000 ........              B TIM7_IRQHandler
+  525                           
+  526                                   PUBWEAK DMA2_Stream0_IRQHandler
+  527                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  528                           DMA2_Stream0_IRQHandler  
+                                DMA2_Stream0_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",528 
+                        Warning[25]: Label 'DMA2_Stre
+                                am0_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  529    00000000 ........              B DMA2_Stream0_IRQHandler
+  530                           
+  531                                   PUBWEAK DMA2_Stream1_IRQHandler
+  532                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  533                           DMA2_Stream1_IRQHandler  
+                                DMA2_Stream1_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",533 
+                        Warning[25]: Label 'DMA2_Stre
+                                am1_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  534    00000000 ........              B DMA2_Stream1_IRQHandler
+  535                           
+  536                                   PUBWEAK DMA2_Stream2_IRQHandler
+  537                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  538                           DMA2_Stream2_IRQHandler  
+                                DMA2_Stream2_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",538 
+                        Warning[25]: Label 'DMA2_Stre
+                                am2_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  539    00000000 ........              B DMA2_Stream2_IRQHandler
+  540                           
+  541                                   PUBWEAK DMA2_Stream3_IRQHandler
+  542                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  543                           DMA2_Stream3_IRQHandler  
+                                DMA2_Stream3_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",543 
+                        Warning[25]: Label 'DMA2_Stre
+                                am3_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  544    00000000 ........              B DMA2_Stream3_IRQHandler
+  545                           
+  546                                   PUBWEAK DMA2_Stream4_IRQHandler
+  547                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  548                           DMA2_Stream4_IRQHandler  
+                                DMA2_Stream4_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",548 
+                        Warning[25]: Label 'DMA2_Stre
+                                am4_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  549    00000000 ........              B DMA2_Stream4_IRQHandler
+  550                           
+  551                                   PUBWEAK ETH_IRQHandler
+  552                                   SECTION .text:CODE:REORDER(1)
+  553                           ETH_IRQHandler  
+                                ETH_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",553 
+                        Warning[25]: Label 'ETH_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+  554    00000000 ........              B ETH_IRQHandler
+  555                           
+  556                                   PUBWEAK ETH_WKUP_IRQHandler
+  557                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  558                           ETH_WKUP_IRQHandler  
+                                ETH_WKUP_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",558 
+                        Warning[25]: Label 'ETH_WKUP_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  559    00000000 ........              B ETH_WKUP_IRQHandler
+  560                           
+  561                                   PUBWEAK CAN2_TX_IRQHandler
+  562                                   SECTION .text:CODE:REORDER(1)
+                                 
+  563                           CAN2_TX_IRQHandler  
+                                CAN2_TX_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",563 
+                        Warning[25]: Label 'CAN2_TX_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  564    00000000 ........              B CAN2_TX_IRQHandler
+  565                           
+  566                                   PUBWEAK CAN2_RX0_IRQHandler
+  567                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  568                           CAN2_RX0_IRQHandler  
+                                CAN2_RX0_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",568 
+                        Warning[25]: Label 'CAN2_RX0_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  569    00000000 ........              B CAN2_RX0_IRQHandler
+  570                           
+  571                                   PUBWEAK CAN2_RX1_IRQHandler
+  572                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  573                           CAN2_RX1_IRQHandler  
+                                CAN2_RX1_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",573 
+                        Warning[25]: Label 'CAN2_RX1_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  574    00000000 ........              B CAN2_RX1_IRQHandler
+  575                           
+  576                                   PUBWEAK CAN2_SCE_IRQHandler
+  577                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  578                           CAN2_SCE_IRQHandler  
+                                CAN2_SCE_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",578 
+                        Warning[25]: Label 'CAN2_SCE_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  579    00000000 ........              B CAN2_SCE_IRQHandler
+  580                           
+  581                                   PUBWEAK OTG_FS_IRQHandler
+  582                                   SECTION .text:CODE:REORDER(1)
+  583                           OTG_FS_IRQHandler  
+                                OTG_FS_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",583 
+                        Warning[25]: Label 'OTG_FS_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+  584    00000000 ........              B OTG_FS_IRQHandler
+  585                           
+  586                                   PUBWEAK DMA2_Stream5_IRQHandler
+  587                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  588                           DMA2_Stream5_IRQHandler  
+                                DMA2_Stream5_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",588 
+                        Warning[25]: Label 'DMA2_Stre
+                                am5_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  589    00000000 ........              B DMA2_Stream5_IRQHandler
+  590                           
+  591                                   PUBWEAK DMA2_Stream6_IRQHandler
+  592                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  593                           DMA2_Stream6_IRQHandler  
+                                DMA2_Stream6_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",593 
+                        Warning[25]: Label 'DMA2_Stre
+                                am6_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  594    00000000 ........              B DMA2_Stream6_IRQHandler
+  595                           
+  596                                   PUBWEAK DMA2_Stream7_IRQHandler
+  597                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  598                           DMA2_Stream7_IRQHandler  
+                                DMA2_Stream7_IRQHandler  
+                                ----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",598 
+                        Warning[25]: Label 'DMA2_Stre
+                                am7_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  599    00000000 ........              B DMA2_Stream7_IRQHandler
+  600                           
+  601                                   PUBWEAK USART6_IRQHandler
+  602                                   SECTION .text:CODE:REORDER(1)
+  603                           USART6_IRQHandler  
+                                USART6_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",603 
+                        Warning[25]: Label 'USART6_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+  604    00000000 ........              B USART6_IRQHandler
+  605                           
+  606                                   PUBWEAK I2C3_EV_IRQHandler
+  607                                   SECTION .text:CODE:REORDER(1)
+                                 
+  608                           I2C3_EV_IRQHandler  
+                                I2C3_EV_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",608 
+                        Warning[25]: Label 'I2C3_EV_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  609    00000000 ........              B I2C3_EV_IRQHandler
+  610                           
+  611                                   PUBWEAK I2C3_ER_IRQHandler
+  612                                   SECTION .text:CODE:REORDER(1)
+                                 
+  613                           I2C3_ER_IRQHandler  
+                                I2C3_ER_IRQHandler  
+                                -----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",613 
+                        Warning[25]: Label 'I2C3_ER_I
+                                RQHandler' is defined pubweak in a section
+                        implicitly declared root
+  614    00000000 ........              B I2C3_ER_IRQHandler
+  615                           
+  616                                   PUBWEAK OTG_HS_EP1_OUT_IRQHandler
+  617                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  618                           OTG_HS_EP1_OUT_IRQHandler  
+                                OTG_HS_EP1_OUT_IRQHandler  
+                                ------------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",618 
+                        Warning[25]: Label 'OTG_HS_EP
+                                1_OUT_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  619    00000000 ........              B OTG_HS_EP1_OUT_IRQHandler
+  620                           
+  621                                   PUBWEAK OTG_HS_EP1_IN_IRQHandler
+  622                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  623                           OTG_HS_EP1_IN_IRQHandler  
+                                OTG_HS_EP1_IN_IRQHandler  
+                                -----------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",623 
+                        Warning[25]: Label 'OTG_HS_EP
+                                1_IN_IRQHandler' is defined pubweak in a
+                        section implicitly declared root
+  624    00000000 ........              B OTG_HS_EP1_IN_IRQHandler
+  625                           
+  626                                   PUBWEAK OTG_HS_WKUP_IRQHandler
+  627                                   SECTION .text:CODE:REORDER(1)   
+                                 
+  628                           OTG_HS_WKUP_IRQHandler  
+                                OTG_HS_WKUP_IRQHandler  
+                                ---------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",628 
+                        Warning[25]: Label 'OTG_HS_WK
+                                UP_IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  629    00000000 ........              B OTG_HS_WKUP_IRQHandler
+  630                           
+  631                                   PUBWEAK OTG_HS_IRQHandler
+  632                                   SECTION .text:CODE:REORDER(1)
+  633                           OTG_HS_IRQHandler  
+                                OTG_HS_IRQHandler  
+                                ----------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",633 
+                        Warning[25]: Label 'OTG_HS_IR
+                                QHandler' is defined pubweak in a section
+                        implicitly declared root
+  634    00000000 ........              B OTG_HS_IRQHandler
+  635                           
+  636                                   PUBWEAK DCMI_IRQHandler
+  637                                   SECTION .text:CODE:REORDER(1)
+  638                           DCMI_IRQHandler  
+                                DCMI_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",638 
+                        Warning[25]: Label 'DCMI_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  639    00000000 ........              B DCMI_IRQHandler
+  640                           
+  641                                   PUBWEAK CRYP_IRQHandler
+  642                                   SECTION .text:CODE:REORDER(1)
+  643                           CRYP_IRQHandler  
+                                CRYP_IRQHandler  
+                                --------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",643 
+                        Warning[25]: Label 'CRYP_IRQH
+                                andler' is defined pubweak in a section
+                        implicitly declared root
+  644    00000000 ........              B CRYP_IRQHandler
+  645                           
+  646                                   PUBWEAK HASH_RNG_IRQHandler
+  647                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  648                           HASH_RNG_IRQHandler  
+                                HASH_RNG_IRQHandler  
+                                ------------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",648 
+                        Warning[25]: Label 'HASH_RNG_
+                                IRQHandler' is defined pubweak in a section
+                        implicitly declared root
+  649    00000000 ........              B HASH_RNG_IRQHandler
+  650                           
+  651                                   PUBWEAK FPU_IRQHandler
+  652                                   SECTION .text:CODE:REORDER(1) 
+                                 
+  653                           FPU_IRQHandler  
+                                FPU_IRQHandler  
+                                -------------^
+                                "C:\Users\owner\Desktop\FISH-Forth-V1.6-STM32F
+                       407vg-Discovery-Board\startup_stm32f4xx.s",653 
+                        Warning[25]: Label 'FPU_IRQHa
+                                ndler' is defined pubweak in a section
+                        implicitly declared root
+  654    00000000 ........              B FPU_IRQHandler
+  655                           
+  656                                   END
+##############################
+#           CRC:0            #
+#        Errors:   0         #
+#        Warnings: 92        #
+#         Bytes: 756         #
+##############################
+
+
+
+

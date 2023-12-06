@@ -5,7 +5,7 @@
         SECTION .intvec:CODE:NOROOT(2)
 
 //        EXTERN  __iar_program_start
-//        PUBLIC  __vector_table
+        PUBLIC  __vector_table
 
         DATA
 __vector_table
